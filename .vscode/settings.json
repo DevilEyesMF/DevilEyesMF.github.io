@@ -1,0 +1,14 @@
+{
+  "liveSassCompile.settings.showOutputWindowOn": "Error",
+  "liveSassCompile.settings.useNewCompiler": true,
+  "liveSassCompile.settings.formats": [
+
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/stylesheets",
+      "savePathReplacementPairs": null
+    }
+  ]
+
+}
