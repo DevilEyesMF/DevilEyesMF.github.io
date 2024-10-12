@@ -99,26 +99,21 @@ nav a.nav-icon img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding: 2rem;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 2rem;
 }
 .gallery img {
   width: auto;
-  height: 400px;
+  max-width: 90%;
+  height: auto;
+  max-height: 25rem;
   align-items: center;
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.7), -4px -4px 8px 4px rgba(255, 255, 255, 0.3);
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.7), -0.25rem -0.25rem 0.5rem 0.25rem rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.2s;
   transition-timing-function: ease-out;
 }
-@media screen and (max-width: 1365px) {
-  .gallery img {
-    height: auto;
-    max-height: 500px;
-    max-width: 90%;
-  }
-}
 .gallery img:hover {
-  box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.4);
+  box-shadow: 0rem 0rem 0.5rem 0.5rem rgba(255, 255, 255, 0.4);
 }/*# sourceMappingURL=main.css.map */
