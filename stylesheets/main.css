@@ -24,7 +24,12 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 80%;
+  padding: 0% 10%;
   list-style: none;
+}
+nav ul li {
+  flex-grow: 1;
 }
 nav ul li a {
   display: block;
@@ -32,7 +37,6 @@ nav ul li a {
   text-decoration: none;
   color: inherit;
   text-align: center;
-  padding-inline: 2rem;
 }
 nav ul li a:hover {
   background-color: #3C3D40;
@@ -43,7 +47,54 @@ nav ul li a.active {
   background-color: #D7D7D9;
   color: #212226;
 }
+nav a.nav-icon {
+  display: none;
+  width: 10%;
+  padding-top: 0.7rem;
+  padding-left: 0.5rem;
+  background-color: transparent;
+  max-height: 3rem;
+}
+nav a.nav-icon img {
+  max-width: 80%;
+}
 
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 90%;
+    min-width: 0%;
+    padding: 0% 0%;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  nav ul li a {
+    display: none;
+    width: 100%;
+  }
+  nav ul li a.active {
+    display: flex;
+    color: inherit;
+    background-color: inherit;
+  }
+  nav.open ul li a {
+    display: flex;
+  }
+  nav.open ul li a.active {
+    display: flex;
+    background-color: #D7D7D9;
+    color: #212226;
+  }
+  nav a.nav-icon {
+    display: block;
+  }
+}
 .gallery {
   display: flex;
   justify-content: center;

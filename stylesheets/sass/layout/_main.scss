@@ -20,18 +20,18 @@ nav {
 	background-color: rgba($color4, 0.7);
 	@include glass;
 	ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flexCenter;
+		min-width: 80%;
+		padding: 0% 10%;
 		list-style: none;
 		li {
+			flex-grow: 1;
 			a {
 				display: block;
 				padding: 1rem;
 				text-decoration: none;
 				color: inherit;
 				text-align: center;
-				padding-inline: 2rem;
 				&:hover {
 					background-color: $color4;
 				}
@@ -41,6 +41,56 @@ nav {
 					color: $color5;
 				}
 			}
+		}
+	}
+	a.nav-icon {
+		display: none;
+		width: 10%;
+		padding-top: .7rem;
+		padding-left: .5rem;
+		background-color: transparent;
+		max-height: 3rem;
+		img {
+			max-width: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px)  {
+	nav {
+		display: flex;
+		ul {
+			flex-direction: column;
+			width: 90%;
+			min-width: 0%;
+			padding: 0% 0%;
+			li {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				a {
+					display: none;
+					width: 100%;
+					&.active {
+						display: flex;
+						color: inherit;
+						background-color: inherit;
+					}
+				}
+			}
+		}
+		&.open {
+			ul li a {
+				display: flex;
+				&.active {
+					display: flex;
+					background-color: $color1;
+					color: $color5;
+				}
+			}
+		}
+		a.nav-icon {
+			display: block;
 		}
 	}
 }
