@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith("nl")) {
-          window.location.href = "/nl/";
-        } else {
-          window.location.href = "/en/";
-        }
-      </script>
+  <script>
+    const storedLang = localStorage.getItem("preferredLang");
+
+    if (storedLang) {
+      // Redirect to the stored preferred language
+      window.location.href = `/${storedLang}/`;
+    } else {
+      // Detect browser language
+      const userLang = navigator.language || navigator.userLanguage;
+      const langPrefix = userLang.startsWith("nl") ? "nl" : "en";
+
+      // Store the preferred language
+      localStorage.setItem("preferredLang", langPrefix);
+
+      // Redirect to appropriate language
+      window.location.href = `/${langPrefix}/`;
+    }
+  </script>
 </body>
+
 </html>
