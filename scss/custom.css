@@ -1739,10 +1739,10 @@ progress {
 
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
+  filter: none;
 }
 .carousel-dark .carousel-indicators [data-bs-target] {
-  background-color: #000;
+  background-color: white;
 }
 .carousel-dark .carousel-caption {
   color: #000;
@@ -1751,10 +1751,10 @@ progress {
 [data-bs-theme=dark] .carousel .carousel-control-prev-icon,
 [data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark].carousel .carousel-control-prev-icon,
 [data-bs-theme=dark].carousel .carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
+  filter: none;
 }
 [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
-  background-color: #000;
+  background-color: white;
 }
 [data-bs-theme=dark] .carousel .carousel-caption, [data-bs-theme=dark].carousel .carousel-caption {
   color: #000;
@@ -11971,4 +11971,7 @@ textarea.form-control-lg {
   src: url(/sources/fonts/STIXTwoText-VariableFont_wght.ttf) format("truetype");
   font-weight: 100 1000;
   font-style: normal;
+}
+.font-stixt {
+  font-family: stixt;
 }/*# sourceMappingURL=custom.css.map */
