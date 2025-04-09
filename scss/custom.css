@@ -11974,4 +11974,10 @@ textarea.form-control-lg {
 }
 .font-stixt {
   font-family: stixt;
+}
+
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=custom.css.map */

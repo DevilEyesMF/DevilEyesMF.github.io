@@ -76,3 +76,9 @@ $carousel-dark-indicator-active-bg: white;
 .font-stixt {
     font-family: stixt;
 }
+
+@include media-breakpoint-up(lg) {
+	.w-lg-100 {
+		width: 100% !important;
+	}
+}
