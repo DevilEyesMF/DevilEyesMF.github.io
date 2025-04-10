@@ -11,5 +11,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const newTheme = this.checked ? 'dark' : 'light';
         htmlElement.setAttribute('data-bs-theme', newTheme);
         localStorage.setItem('bsTheme', newTheme);
+
+        const event = new CustomEvent('themeChanged');
+        window.dispatchEvent(event);
     });
 });
