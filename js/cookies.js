@@ -9,5 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesAccepted', 'true');
         banner.classList.add('d-none');
+        // dispatch event
+        const event = new Event('cookieConsentGiven');
+        document.dispatchEvent(event);
     });
 });
