@@ -20,9 +20,9 @@ if ($gallery.attr('data-gallery-path')) {
 
             $a.append($img);
             $gallery.append($a);
-            // Initialize gallery
-            initGallery($gallery);
         });
+        // Initialize gallery
+        initGallery($gallery);
     });
 } else {
     initGallery($gallery);
