@@ -10,7 +10,27 @@
     </url>
     <url>
         <loc>https://www.captainclaes.com/en/gallery</loc>
-        <lastmod>2025-04-20</lastmod>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/en/gallery/astro</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/en/gallery/motorsports</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/en/gallery/motorsports/spa-six-hours-2024</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/en/gallery/motorsports/super-spa-2024</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/en/gallery/wildlife</loc>
+        <lastmod>2025-04-22</lastmod>
     </url>
     <url>
         <loc>https://www.captainclaes.com/en/contact</loc>
@@ -27,5 +47,29 @@
     <url>
         <loc>https://www.captainclaes.com/nl/contact</loc>
         <lastmod>2025-04-10</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery/astro</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery/motorsports</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery/motorsports/spa-six-hours-2024</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery/motorsports/super-spa-2024</loc>
+        <lastmod>2025-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://www.captainclaes.com/nl/gallery/wildlife</loc>
+        <lastmod>2025-04-22</lastmod>
     </url>
 </urlset>
