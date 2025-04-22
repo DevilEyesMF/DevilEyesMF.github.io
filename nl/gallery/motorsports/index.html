@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Captain Claes Photography</title>
+    <title>Gallery | Captain Claes Photography</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/scss/custom.css">
     <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/justifiedgallery/justifiedgallery.min.css">
+    <link rel="stylesheet" href="/fancybox/fancybox.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
     <div class="sticky-top">
         <nav class="navbar navbar-expand-md bg-dark-subtle text-light" data-bs-theme="dark">
             <div class="container">
@@ -29,10 +32,10 @@
                             <a class="nav-link" href="../about-me">About me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../gallery">Gallery</a>
+                            <a class="nav-link active" href="">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="">Contact</a>
+                            <a class="nav-link" href="../contact">Contact</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav me-5">
@@ -63,88 +66,59 @@
         </nav>
     </div>
 
+    <!-- Content -->
     <div class="container flex-fill">
 
+        <!-- Breadcrumb -->
+        <nav class="mt-3" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-body" href="..">Gallery</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Motorsports</li>
+            </ol>
+        </nav>
+
+        <!-- Title -->
         <div class="row my-3">
             <div class="col">
-                <h1 class="text-center mb-0 font-stixt fw-bold">Vaar mee op mijn avontuur!</h1>
+                <h1 class="text-center mb-0 font-stixt fw-bold">Evenementen</h1>
             </div>
         </div>
 
-        <div class=" row g-3 mb-3">
-            <!-- Contact card -->
-            <div class="col-12 col-lg-7">
-                <div class="card flex-fill bg-light-subtle">
-                    <div class="card-body">
-                        <h2 class="card-title font-stixt fw-bold">Captain Claes Photography</h2>
-                        <h4 class="card-texts text-secondary">Remko Claes</h4>
-                        <div class="container">
-                            <div class="row g-3 mb-3">
-                                <div class="col-6 offset-3 col-md-3 offset-md-0 d-flex align-items-center">
-                                    <img src="/sources/logo/nbg_captainclaeslogo_full.png" id="logo"
-                                        class="img-fluid bg-transparent" alt="logo">
-                                    <script>
-                                        function updateLogoForTheme() {
-                                            const logo = document.getElementById('logo');
-                                            const theme = localStorage.getItem('bsTheme');
-
-                                            if (theme == 'dark') {
-                                                logo.src = '/sources/logo/nbg_white_captainclaeslogo_full.png'; // dark mode version
-                                            } else {
-                                                logo.src = '/sources/logo/nbg_captainclaeslogo_full.png'; // light mode version
-                                            }
-                                        }
-
-                                        // Run once on page load
-                                        window.addEventListener('DOMContentLoaded', updateLogoForTheme)
-
-                                        // Re-run when the theme toggle is used
-                                        window.addEventListener('themeChanged', updateLogoForTheme);
-                                    </script>
-                                </div>
-                                <div class="col-12 col-md-9">
-                                    <p class="card-text">
-                                        Wil je contact opnemen, maar denk je dat een boodschap in een fles niet genoeg
-                                        is?<br>
-                                        Of misschien wil je gewoon mijn avonturen volgen.
-                                    </p>
-                                    <p>
-                                        Als je vragen hebt of wilt samenwerken, stuur gerust een email of een bericht op
-                                        Instagram.
-                                    </p>
-                                    <p>
-                                        <a href="mailto:contact@captainclaes.com"
-                                            class="text-body text-decoration-none mx-1 p-0">
-                                            <i class="bi bi-envelope"></i>
-                                        </a>
-                                        <span class="fw-bold">email:</span>
-                                        contact@captainclaes.com
-                                    </p>
-                                    <p>
-                                        <a href="https://instagram.com/captain.claes" target="_blank"
-                                            class="text-body text-decoration-none mx-1 p-0">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                        <span class="fw-bold">Instagram:</span>
-                                        captain.claes
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+        <!-- Categories -->
+        <div class=" row g-3 mb-5">
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0">
+                <div class="gallery-categories">
+                    <a href="super-spa-2024/">
+                        <figure>
+                            <img src="/sources/images/gallery/motorsports/spa-francorchamps/2024-super-spa/20241006-10-22-30_2048.jpg"
+                                alt="">
+                            <figcaption>Super Spa 2024</figcaption>
+                        </figure>
+                    </a>
+                    <a href="spa-six-hours-2024/">
+                        <figure>
+                            <img src="/sources/images/gallery/motorsports/spa-francorchamps/2024-spa-six-hours/20240928-10-58-25_1_2048.jpg"
+                                alt="">
+                            <figcaption>Spa Six Hours 2024</figcaption>
+                        </figure>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Instagram profile -->
-            <div id="ig-embed" class="col-12 col-lg-5 d-flex justify-content-center">
-                <div class="text-center mt-3">
-                    <p>Je moet cookies accepteren om dit te zien. (Mijn instagram account).</p>
-                    <button id="ig-embed-accept-cookies" class="btn btn-secondary">Accepteer cookies</button>
-                    <script src="/js/igembed.js" defer></script>
+        <!-- Title -->
+        <div class="row my-3">
+            <div class="col">
+                <h1 class="text-center mb-0 font-stixt fw-bold">Photos</h1>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class=" row">
+            <div class="col-10 offset-1 col-lg-12 offset-lg-0">
+                <div id="gallery" class="gallery justified-gallery">
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -177,17 +151,19 @@
                             <h5 class="fw-bold">Navigation</h5>
                             <ul class="list-unstyled">
                                 <li><a href="/en" class="text-light text-decoration-none">Home</a></li>
-                                <li><a href="/en/about-me" class="text-light text-decoration-none">About Me</a>
+                                <li><a href="/en/about-me/" class="text-light text-decoration-none">About Me</a>
                                 </li>
-                                <li><a href="/en/gallery" class="text-light text-decoration-none">Gallery</a></li>
-                                <li><a href="/en/contact" class="text-light text-decoration-none">Contact</a></li>
+                                <li><a href="/en/gallery" class="text-light text-decoration-none">Gallery</a>
+                                </li>
+                                <li><a href="/en/contact" class="text-light text-decoration-none">Contact</a>
+                                </li>
                             </ul>
                         </div>
 
                         <div class="col-12 col-lg-auto offset-lg-1">
                             <h5 class="fw-bold">Latest</h5>
                             <ul class="list-unstyled">
-                                <li><a href="/en/about-me" class="text-light text-decoration-none">About Me</a>
+                                <li><a href="/en/about-me/" class="text-light text-decoration-none">About Me</a>
                                 </li>
                             </ul>
                         </div>
@@ -211,7 +187,7 @@
 
             <hr class="my-3 border-secondary">
             <div class="text-center text-secondary small">
-                &copy; 2025 Remko Claes - Alle rechten voorbehouden<br>
+                &copy; 2025 Remko Claes - All rights reserved<br>
             </div>
 
         </div>
@@ -221,12 +197,12 @@
     <div id="cookie-banner" class="alert alert-dark fixed-bottom mb-0 rounded-0 text-center d-none" role="alert">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <span>
-                Deze website gebruikt cookies om je de beste ervaring te bieden.
-                <a href="/nl/privacy" target="_blank" class="link-body-emphasis">Meer weten</a>
+                This website uses cookies to ensure you get the best experience.
+                <a href="/en/privacy" target="_blank" class="link-body-emphasis">Learn more</a>
             </span>
             <div>
-                <button id="decline-cookies" class="btn btn-outline-secondary mt-2 mt-md-0">Weiger</button>
-                <button id="accept-cookies" class="btn btn-secondary mt-2 mt-md-0">Begrepen!</button>
+                <button id="decline-cookies" class="btn btn-outline-secondary mt-2 mt-md-0">Decline</button>
+                <button id="accept-cookies" class="btn btn-secondary mt-2 mt-md-0">Got it!</button>
             </div>
         </div>
     </div>
@@ -235,6 +211,10 @@
     <script src="/js/darkmodetoggle.js" defer></script>
     <script src="/js/languagetoggle.js" defer></script>
     <script src="/js/cookies.js" defer></script>
+    <script src="/js/jquery3-7-1.js" defer></script>
+    <script src="/justifiedgallery/jquery.justifiedgallery.min.js" defer></script>
+    <script src="/fancybox/fancybox.umd.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
 </body>
 
 </html>
