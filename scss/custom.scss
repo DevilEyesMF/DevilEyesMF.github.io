@@ -83,8 +83,24 @@ $carousel-dark-indicator-active-bg: white;
 	}
 }
 
-div.gallery a img {
+div.gallery a {
 	border-radius: 5px;
+
+	&::after {
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		transition: 250ms ease-out;
+	}
+
+	&:hover {
+		&::after {
+			box-shadow: inset 0px 0px 75px -20px #ffffff80;
+		}
+	}
 }
 
 div.gallery-categories {

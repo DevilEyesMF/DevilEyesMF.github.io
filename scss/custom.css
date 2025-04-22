@@ -11981,8 +11981,20 @@ textarea.form-control-lg {
     width: 100% !important;
   }
 }
-div.gallery a img {
+div.gallery a {
   border-radius: 5px;
+}
+div.gallery a::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: 250ms ease-out;
+}
+div.gallery a:hover::after {
+  box-shadow: inset 0px 0px 75px -20px rgba(255, 255, 255, 0.5019607843);
 }
 
 div.gallery-categories {
