@@ -5,7 +5,7 @@ if ($gallery.attr('data-gallery-path')) {
     const basePath = $gallery.attr('data-gallery-path');
 
     $.getJSON(basePath + "images.json", function (data) {
-        data.images.forEach(function (image) {
+        data.images.reverse().forEach(function (image) {
             const fullPath = basePath + image;
 
             const $a = $("<a>", {
