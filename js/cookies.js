@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
 
     if (!localStorage.getItem('cookiesAccepted')) {
         banner.classList.remove('d-none');
@@ -13,4 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const event = new Event('cookieConsentGiven');
         document.dispatchEvent(event);
     });
+
+    declineBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        banner.classList.add('d-none');
+    });
+
 });
