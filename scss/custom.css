@@ -11981,6 +11981,19 @@ textarea.form-control-lg {
     width: 100% !important;
   }
 }
+button.simple-btn {
+  text-align: center;
+  font-size: x-large;
+  padding: 1rem;
+  background-color: var(--bs-bg-color);
+  border: 3px solid var(--bs-body-color);
+  transition: 250ms ease-out;
+}
+button.simple-btn:hover {
+  background-color: var(--bs-secondary-bg);
+  transition: 0ms;
+}
+
 div.gallery a {
   border-radius: 5px;
 }
