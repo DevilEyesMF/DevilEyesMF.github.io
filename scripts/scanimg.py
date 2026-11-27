@@ -11,6 +11,7 @@ def get_image_structure(path):
     structure = {"images": [], "directories": {}}
     try:
         with os.scandir(path) as entries:
+            entries = sorted(entries, key=lambda e: e.name.lower())
             for entry in entries:
                 if entry.is_file() and is_image_file(entry.name):
                     structure["images"].append(entry.name)
